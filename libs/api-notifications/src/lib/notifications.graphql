@@ -1,0 +1,46 @@
+type Query {
+  notification(_id: String): Notification
+  notifications: [Notification]
+  notificationsByRecipientId(recipientId: String): [Notification]
+}
+
+type Mutation {
+  createNotification(createNotificationInput: CreateNotificationInput!): Notification
+  createNotifications(createNotificationsInput: CreateNotificationsInput!): [Notification]
+}
+
+type Subscription {
+  notificationCreated(recipientId: String!): Notification
+}
+
+type Notification {
+  _id: String!
+  category: String!
+  createdAt: String!
+  isDeleted: Boolean!
+  isRead: Boolean!
+  message: String
+  recipientId: String!
+  senderId: String
+  updateAt: String
+}
+
+input CreateNotificationInput {
+  category: String!
+  message: String!
+  recipientId: String!
+  senderId: String
+}
+
+input CreateNotificationsInput {
+  category: NotificationCategory!
+  message: String!
+  recipientId: [String]!
+  senderId: String
+}
+
+enum NotificationCategory {
+  FUNDING
+  NONPROFIT_ORG_ADDED
+  NONPROFIT_USER_ADDED
+}

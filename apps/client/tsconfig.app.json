@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.json",
+  "angularCompilerOptions": {
+    "enableIvy": true,
+  },
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": [],
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "resolveJsonModule": true,
+    "strictNullChecks": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2018",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"]
+}

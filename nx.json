@@ -1,0 +1,35 @@
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "resilia-notifications",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NDdmMjZjZjAtZmE5Yi00ZDg0LTlkY2ItMDYzMTEyNTM5MzhjfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "client": { "tags": [] },
+    "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
+    "api": { "tags": [] },
+    "notifications": { "tags": [] },
+    "database": { "tags": [] },
+    "dashboard": { "tags": ["scope:client", "type:ui"] },
+    "graphql-schema": { "tags": [] },
+    "data-access": { "tags": ["scope:shared", "type:data"] },
+    "client-user": { "tags": ["scope:shared", "type:data"] },
+    "client-shared": { "tags": ["scope:shared", "type:ui"] }
+  }
+}

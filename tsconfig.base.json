@@ -1,0 +1,34 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@resilia-notifications/notifications": [
+        "libs/api-notifications/src/index.ts"
+      ],
+      "@resilia-notifications/database": ["libs/api-database/src/index.ts"],
+      "@resilia-notifications/graphql-schema": [
+        "libs/api-graphql-schema/src/index.ts"
+      ],
+      "@client/dashboard": ["libs/client-dashboard/src/index.ts"],
+      "@client/data-access": ["libs/client-data-access/src/index.ts"],
+      "@client/user": ["libs/client-user/src/index.ts"],
+      "@client/shared": ["libs/client-shared/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

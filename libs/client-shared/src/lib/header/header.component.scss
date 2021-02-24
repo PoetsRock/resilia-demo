@@ -1,0 +1,165 @@
+@import '~@angular/material/theming';
+$success: green;
+$warn: red;
+$hover-transition-slow: all 0.6s ease-in;
+$hover-transition-fast: all 0.2s ease;
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+::ng-deep .notifications-dropdown .mat-menu-content {
+  background-color: #fcfcfc;
+  width: 100%;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+::ng-deep .notifications-dropdown.mat-menu-panel {
+  background-color: #fcfcfc;
+  min-width: 300px;
+}
+
+.notification-counter {
+  position: relative;
+  display: flex;
+  float: right;
+  margin-top: -40px;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: crimson;
+  color: whitesmoke;
+  font-weight: bold;
+  top: 0;
+  right: 0;
+}
+
+.notification-container {
+  background-color: #fcfcfc;
+  margin: 0 auto;
+}
+
+.no-notifications {
+  color: #2e6b97;
+  text-align: center;
+}
+
+mat-card {
+  padding: 8px;
+  border-radius: 4px;
+  width: 95%;
+  background-color: #888888;
+  color: #1f1f1f;
+}
+
+.selected-row {
+  border: 3px solid #2e6b97;
+}
+
+.single-notification {
+  cursor: pointer;
+  font-size: 11px;
+  margin-bottom: 5px;
+  transition: 0.2s;
+  border: 1px solid lightgray;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: 0 0 5px black;
+  }
+}
+
+mat-icon.dismiss-btn {
+  padding-top: 4px;
+  color: $warn;
+  visibility: hidden;
+}
+
+mat-card.single-notification:hover .dismiss-btn {
+  visibility: visible;
+  transition: $hover-transition-fast;
+}
+
+.mat-card:not([class*='mat-elevation-z']) {
+  box-shadow: none;
+}
+
+.single-notification-body {
+  margin-left: 8px;
+}
+
+.drop-down {
+  visibility: hidden;
+}
+
+.single-notification-header {
+  font-weight: 500;
+}
+
+.header-left {
+  width: 75%;
+}
+
+.read-toggle {
+  width: 125px;
+  background: white;
+  color: #2e6b97;
+}
+
+.read-button {
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.mark-as-read-icon {
+  color: $success;
+}
+
+.mark-as-unread-icon {
+  color: #000000;
+}
+
+.header-center {
+  text-align: center;
+  width: 100%;
+}
+
+.label {
+  color: #888888;
+  font-size: 14px;
+}
+
+.source-system-label {
+  color: #1f1f1f;
+  font-size: 14px;
+}
+
+.dot-status-color {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+
+  &.ToDo {
+    background-color: crimson;
+  }
+
+  &.Completed {
+    background-color: $success;
+  }
+}
+
+.updated-date, .completed-date {
+  margin-left: 16px;
+}
+
+.updated-date, .completed-date {
+  margin-left: 16px;
+}

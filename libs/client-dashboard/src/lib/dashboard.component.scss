@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+  height: calc(100% - 64px);
+}
+.notification-form {
+  margin: 16px;
+  padding: 16px;
+}
+
+.sub-header {
+  font-size: 16px;
+  color: aliceblue;
+  margin-bottom: 24px;
+}
+
+.note {
+  margin: 36px 0;
+  font-size: 14px;
+  color: #1f1f1f;
+}
